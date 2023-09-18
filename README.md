@@ -32,11 +32,11 @@ Go to /tf/caf/gcc_starter/landingzone/configuration/level0/launchpad/README.md a
 
 ## Lab 3 - Networking
 
-Go to /tf/caf/gcc_starter/landingzone/configuration/level3/networking_spoke_internet/README.md and follow the steps in the readme file.
+Go to /tf/caf/gcc_starter/landingzone/configuration/level1/networking/README.md and follow the steps in the readme file.
 
 ## Lab 4 - Solution Accelerator
 
-Go to /tf/caf/gcc_starter/landingzone/configuration/level4/vm_windows/Readme.md and follow the steps in the readme file.
+Go to /tf/caf/gcc_starter/landingzone/configuration/level2/vm_windows/Readme.md and follow the steps in the readme file.
 
 
 ## Lab 5 - Clean up 
@@ -44,7 +44,7 @@ Go to /tf/caf/gcc_starter/landingzone/configuration/level4/vm_windows/Readme.md 
 ```bash
 rover -lz /tf/caf/landingzones/caf_solution \
 -level level4 \
--var-folder /tf/caf/gcc_starter/landingzone/configuration/level4/vm_windows \
+-var-folder /tf/caf/gcc_starter/landingzone/configuration/level2/vm_windows \
 -parallelism 30 \
 -env sandpit \
 -tfstate solution_accelerators_vm_windows.tfstate \
@@ -54,7 +54,7 @@ rover -lz /tf/caf/landingzones/caf_solution \
 ```bash
 rover -lz /tf/caf/landingzones/caf_solution \
 -level level3 \
--var-folder /tf/caf/gcc_starter/landingzone/configuration/level3/networking_spoke_internet \
+-var-folder /tf/caf/gcc_starter/landingzone/configuration/level1/networking_spoke_internet \
 -env sandpit \
 -tfstate networking_spoke_internet.tfstate \
 -a destroy
@@ -67,12 +67,6 @@ rover -lz /tf/caf/landingzones/caf_launchpad \
   -parallelism 30 \
   -env sandpit \
   -a destroy
-```
-
-```bash
-cd gcc-dev-env
-terraform destroy
-cd ..
 ```
 
 
