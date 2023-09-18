@@ -27,7 +27,6 @@ Open file in VS code
 
 1. Goto line 6, replace the prefix "ignite"  with your own unique 5 characters code prefix, e.g. "benng"
 
-2. Goto line 30, replace the project code "CAF-TF" with your own unique project code, e.g. "lab1"
 
 
 ## Deployment
@@ -49,7 +48,7 @@ rover -lz /tf/caf/landingzones/caf_launchpad \
 ```  
 
 # Next step
-# Goto README.md at /tf/caf/gcc_starter/landingzone/configuration/level3/networking_spoke_internet/README.md
+# Goto README.md at /tf/caf/gcc_starter/landingzone/configuration/level1/networking_spoke_internet/README.md
 
 ```bash
 rover -lz /tf/caf/landingzones/caf_launchpad \

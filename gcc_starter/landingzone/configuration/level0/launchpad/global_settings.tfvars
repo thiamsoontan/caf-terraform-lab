@@ -3,7 +3,7 @@
 passthrough   = false
 random_length = 3
 inherit_tags  = true
-prefix        = "ignite"
+prefix        = "ignit2"
 
 # Default region. When not set to a resource it will use that value
 default_region = "region1"
