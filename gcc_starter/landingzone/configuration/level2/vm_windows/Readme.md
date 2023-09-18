@@ -39,9 +39,9 @@ Open file in VS code
 
 3. Add vnet_key, subnet_key and lz_key at line 38 as shown below
 
-        lz_key                  = "netowrking" # vnet and subnet in a remote landing zone        
+        lz_key                  = "networking" # vnet and subnet in a remote landing zone        
         vnet_key                = "vnet_spoke_internet_re1" # "vnet_region1"
-        subnet_key              = "app" # "example"
+        subnet_key              = "app" # "example"   
 
 4. Comment line 55-56 priority and eviction_policy - only applicable for Spot priority
         # priority        = "Spot"

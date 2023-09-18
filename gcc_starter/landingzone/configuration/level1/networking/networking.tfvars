@@ -13,7 +13,6 @@ vnets = {
   # project vnet - internet zone
   # [TODO: add a project vnet and subnets here]
 
-
   # project vnet - intranet zone
   vnet_spoke_intranet_re1 = { 
     resource_group_key = "networking_spoke_re1"

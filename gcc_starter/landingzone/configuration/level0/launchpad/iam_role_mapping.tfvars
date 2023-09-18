@@ -26,7 +26,7 @@ role_mapping = {
             keys = ["user"]
           }
         }
-      }            
+      }
       level3 = {
         "Storage Blob Data Contributor" = {
           logged_in = {
@@ -41,8 +41,6 @@ role_mapping = {
           }
         }
       }
-      
-      
     }
   }
 

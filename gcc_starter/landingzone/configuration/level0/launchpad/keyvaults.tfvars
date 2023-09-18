@@ -6,7 +6,8 @@ keyvaults = {
     sku_name            = "standard"
     soft_delete_enabled = true
     tags = {
-      tfstate = "level0"
+      tfstate     = "level0"
+      environment = "sandpit"
     }
 
     creation_policies = {
@@ -25,7 +26,8 @@ keyvaults = {
     sku_name            = "standard"
     soft_delete_enabled = true
     tags = {
-      tfstate = "level1"
+      tfstate     = "level1"
+      environment = "sandpit"
     }
 
     creation_policies = {
@@ -43,7 +45,8 @@ keyvaults = {
     sku_name            = "standard"
     soft_delete_enabled = true
     tags = {
-      tfstate = "level2"
+      tfstate     = "level2"
+      environment = "sandpit"
     }
 
     creation_policies = {
@@ -62,7 +65,8 @@ keyvaults = {
     sku_name            = "standard"
     soft_delete_enabled = true
     tags = {
-      tfstate = "level3"
+      tfstate     = "level3"
+      environment = "sandpit"
     }
 
     creation_policies = {
@@ -80,7 +84,8 @@ keyvaults = {
     sku_name            = "standard"
     soft_delete_enabled = true
     tags = {
-      tfstate = "level4"
+      tfstate     = "level4"
+      environment = "sandpit"
     }
 
     creation_policies = {
