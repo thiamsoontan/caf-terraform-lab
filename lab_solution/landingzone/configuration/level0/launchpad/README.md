@@ -27,8 +27,6 @@ Open file in VS code
 
 1. Goto line 6, replace the prefix "ignite"  with your own unique 5 characters code prefix, e.g. "benng"
 
-2. Goto line 30, replace the project code "CAF-TF" with your own unique project code, e.g. "lab1"
-
 
 ## Deployment
 
