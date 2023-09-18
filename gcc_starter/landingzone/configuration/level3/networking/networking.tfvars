@@ -12,32 +12,6 @@ vnets = {
 
   # project vnet - internet zone
   # [TODO: add a project vnet and subnets here]
-  vnet_spoke_internet_re1 = { 
-    resource_group_key = "dev_env_re1"
-    region             = "region1"
-    vnet = {
-      name          = "spoke-internet-re1"
-      address_space = ["172.16.0.0/20"]
-    }
-    specialsubnets = {}
-    subnets = {
-      web = {
-        name    = "web-layer"
-        cidr    = ["172.16.0.0/24"]
-        nsg_key = "web_nsg"
-      }
-      app = {
-        name    = "app-layer"
-        cidr    = ["172.16.1.0/24"]
-        nsg_key = "app_nsg"
-      }
-      data = {
-        name    = "data-layer"
-        cidr    = ["172.16.2.0/24"]
-        nsg_key = "data_nsg"
-      }
-    }    
-  }
 
   # project vnet - intranet zone
   vnet_spoke_intranet_re1 = { 

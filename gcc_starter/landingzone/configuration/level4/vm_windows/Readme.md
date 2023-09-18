@@ -76,6 +76,14 @@ Open file in VS code
 #   }
 # }
 
+6. Comment line 9-13 resource groups setting - since it is in current level resource_group.tfvars
+
+# resource_groups = {
+#   vm_region1 = {
+#     name = "example-virtual-machine-rg1"
+#   }
+# }
+
 ## Deployment
 
 ```bash
