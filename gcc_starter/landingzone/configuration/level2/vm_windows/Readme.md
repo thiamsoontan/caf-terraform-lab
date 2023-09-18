@@ -104,39 +104,12 @@ rover -lz /tf/caf/landingzones/caf_solution \
 -a apply
 ```
 
-```bash
-
-rover -lz /tf/caf/landingzones/caf_solution \
--level level2 \
--var-folder /tf/caf/gcc_starter/landingzone/configuration/level4/vm_windows \
--env sandpit \
--tfstate solution_accelerators_vm_windows.tfstate \
--a plan
-
-rover -lz /tf/caf/landingzones/caf_solution \
--level level4 \
--var-folder /tf/caf/gcc_starter/landingzone/configuration/level4/vm_windows \
--env sandpit \
--tfstate solution_accelerators_vm_windows.tfstate \
--a plan
-```
-
-```bash
-rover -lz /tf/caf/landingzones/caf_solution \
--level level4 \
--var-folder /tf/caf/gcc_starter/landingzone/configuration/level4/vm_windows \
--parallelism 30 \
--env sandpit \
--tfstate solution_accelerators_vm_windows.tfstate \
--a apply
-```
-
 # End of lab 4
 
 ```bash
 rover -lz /tf/caf/landingzones/caf_solution \
--level level4 \
--var-folder /tf/caf/gcc_starter/landingzone/configuration/level4/vm_windows \
+-level level2 \
+-var-folder /tf/caf/gcc_starter/landingzone/configuration/level2/vm_windows \
 -parallelism 30 \
 -env sandpit \
 -tfstate solution_accelerators_vm_windows.tfstate \
