@@ -1,6 +1,4 @@
 
-
-
 ## Pre-requisites
 
 login account must be the owner of the subscription when creating the level3
@@ -22,9 +20,6 @@ az account set --subscription [your subscription id]
 
 
 ## Lab 3
-Replace all resource group name and vnet name in file 
-/tf/caf/gcc_starter/landingzone/configuration/level3/networking_spoke_internet/virtual_subnets.tfvars
-
 Open file in VS code
 
 1. Add a project virtual network and subnets to line 14 in the file
@@ -98,26 +93,32 @@ Open file in VS code
 
 ## Deployment
 
-rover -lz rover -lz /tf/caf/landingzones/caf_solution \
--level level3 \
--var-folder /tf/caf/gcc_starter/landingzone/configuration/level3/networking \
+```bash
+rover -lz /tf/caf/landingzones/caf_solution \
+-level level1 \
+-var-folder /tf/caf/gcc_starter/landingzone/configuration/level1/networking \
 -env sandpit \
 -tfstate networking.tfstate \
 -a plan
+```
 
-rover -lz rover -lz /tf/caf/landingzones/caf_solution \
--level level3 \
--var-folder /tf/caf/gcc_starter/landingzone/configuration/level3/networking \
+```bash
+rover -lz /tf/caf/landingzones/caf_solution \
+-level level1 \
+-var-folder /tf/caf/gcc_starter/landingzone/configuration/level1/networking \
 -env sandpit \
 -tfstate networking.tfstate \
--a apply
+-a apply 
+```
 
 # Next step
 # Goto README.md at /tf/caf/gcc_starter/landingzone/configuration/level4/vm_windows/Readme.md
 
-rover -lz rover -lz /tf/caf/landingzones/caf_solution \
--level level3 \
--var-folder /tf/caf/gcc_starter/landingzone/configuration/level3/networking \
+```bash
+rover -lz /tf/caf/landingzones/caf_solution \
+-level level1 \
+-var-folder /tf/caf/gcc_starter/landingzone/configuration/level1/networking \
 -env sandpit \
 -tfstate networking.tfstate \
 -a destroy
+```

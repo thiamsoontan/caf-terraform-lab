@@ -1,13 +1,12 @@
 landingzone = {
   backend_type        = "azurerm"
-  level               = "level4"
-  key                 = "vm_windows"    
-  global_settings_key = "networking" 
+  global_settings_key = "networking"
+  level               = "level2"
+  key                 = "vm"
   tfstates = {
     networking = {
       level   = "lower"
       tfstate = "networking.tfstate"
-    }    
+    }
   }
 }
-

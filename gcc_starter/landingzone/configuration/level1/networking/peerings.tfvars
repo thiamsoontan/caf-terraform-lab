@@ -3,7 +3,6 @@ vnet_peerings = {
   # ingress vnet to internet vnet
   # [TODO: add a peering from ingress to project vnet here]
 
-
   vnet_hub_ingress_re1_TO_vnet_internet_re1 = {
     name = "vnet_hub_ingress_re1_TO_vnet_internet_re1"
     from = {
