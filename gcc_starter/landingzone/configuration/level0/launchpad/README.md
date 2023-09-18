@@ -25,7 +25,7 @@ Goto file /tf/caf/gcc_starter/landingzone/configuration/level0/launchpad/global_
 
 Open file in VS code
 
-1. Goto line 6, replace the prefix "ignite"  with your own unique 5 characters code prefix, e.g. "benng"
+1. Goto line 12, replace the prefix "ignite"  with your own unique 5 characters code prefix, e.g. "benng"
 
 
 
