@@ -27,7 +27,7 @@ Open file in VS code
 
 ```bash
   vnet_spoke_internet_re1 = { 
-    resource_group_key = "dev_env_re1"
+    resource_group_key = "networking_spoke_re1"
     region             = "region1"
     vnet = {
       name          = "spoke-internet-re1"
