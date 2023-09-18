@@ -25,7 +25,7 @@ az account set --subscription [your subscription id]
 1. Copy example "101-single-windows-vm" from aztfmod/examples folder to level4/vm_windows
 
 ```bash
-cp /tf/caf/landingzones/aztfmod/examples/compute/virtual_machine/101-single-windows-vm/configuration.tfvars /tf/caf/gcc_starter/landingzone/configuration/level4/vm_windows/vm.tfvars
+cp /tf/caf/landingzones/aztfmod/examples/compute/virtual_machine/101-single-windows-vm/configuration.tfvars /tf/caf/gcc_starter/landingzone/configuration/level2/vm_windows/vm.tfvars
 ```
 
 Open file in VS code
