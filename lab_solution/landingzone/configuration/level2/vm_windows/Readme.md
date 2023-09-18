@@ -21,9 +21,6 @@ az account set --subscription [your subscription id]
 
 
 ## Lab 4
-Replace resource group name and vnet name in file 
-/tf/caf/gcc_starter/landingzone/configuration/level4/vm_windows/vm.tfvars
-
 
 1. Copy example "101-single-windows-vm" from aztfmod/examples folder to level4/vm_windows
 
@@ -35,19 +32,39 @@ Open file in VS code
 /tf/caf/gcc_starter/landingzone/configuration/level4/vm_windows/vm.tfvars
 
 
-2. Comment line 85 and line 86
+2. Comment line 36 and line 37
 
         # vnet_key                = "vnet_region1"
         # subnet_key              = "example"
 
-3. Add vnet_key, subnet_key and lz_key at line 87 as shown below
+3. Add vnet_key, subnet_key and lz_key at line 38 as shown below
 
         lz_key                  = "netowrking" # vnet and subnet in a remote landing zone        
         vnet_key                = "vnet_spoke_internet_re1" # "vnet_region1"
         subnet_key              = "app" # "example"
 
+4. Comment line 55-56 priority and eviction_policy - only applicable for Spot priority
+        # priority        = "Spot"
+        # eviction_policy = "Deallocate"
+   
+5. Comment line 2-7 global setting - since it is in level 0 launchpad
 
-4. Comment line 106-122 vnets configuration - since it is created in level 3 networking
+# global_settings = {
+#   default_region = "region1"
+#   regions = {
+#     region1 = "australiaeast"
+#   }
+# }
+
+6. Comment line 9-13 resource groups setting - since it is in current level resource_group.tfvars
+
+# resource_groups = {
+#   vm_region1 = {
+#     name = "example-virtual-machine-rg1"
+#   }
+# }
+
+7. Comment line 106-122 vnets configuration - since it is created in level 3 networking
 
 # vnets = {
 #   vnet_region1 = {
@@ -67,30 +84,38 @@ Open file in VS code
 #   }
 # }
 
-5. Comment line 2-7 global setting - since it is in level 0 launchpad
-
-# global_settings = {
-#   default_region = "region1"
-#   regions = {
-#     region1 = "australiaeast"
-#   }
-# }
-
-6. Comment line 9-13 resource groups setting - since it is in current level resource_group.tfvars
-
-# resource_groups = {
-#   vm_region1 = {
-#     name = "example-virtual-machine-rg1"
-#   }
-# }
-
 ## Deployment
 
 ```bash
 rover -lz /tf/caf/landingzones/caf_solution \
+-level level2 \
+-var-folder /tf/caf/gcc_starter/landingzone/configuration/level2/vm_windows \
+-env sandpit \
+-tfstate solution_accelerators_vm_windows.tfstate \
+-a plan
+```
+
+```bash
+rover -lz /tf/caf/landingzones/caf_solution \
+-level level2 \
+-var-folder /tf/caf/gcc_starter/landingzone/configuration/level2/vm_windows \
+-env sandpit \
+-tfstate solution_accelerators_vm_windows.tfstate \
+-a apply
+```
+
+```bash
+
+rover -lz /tf/caf/landingzones/caf_solution \
+-level level2 \
+-var-folder /tf/caf/gcc_starter/landingzone/configuration/level4/vm_windows \
+-env sandpit \
+-tfstate solution_accelerators_vm_windows.tfstate \
+-a plan
+
+rover -lz /tf/caf/landingzones/caf_solution \
 -level level4 \
 -var-folder /tf/caf/gcc_starter/landingzone/configuration/level4/vm_windows \
--parallelism 30 \
 -env sandpit \
 -tfstate solution_accelerators_vm_windows.tfstate \
 -a plan

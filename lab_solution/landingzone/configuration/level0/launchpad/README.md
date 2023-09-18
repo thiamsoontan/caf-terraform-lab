@@ -25,9 +25,9 @@ Goto file /tf/caf/gcc_starter/landingzone/configuration/level0/launchpad/global_
 
 Open file in VS code
 
-1. Goto line 19, replace the prefix "ignite"  with your own unique 5 characters code prefix, e.g. "tants"
+1. Goto line 6, replace the prefix "ignite"  with your own unique 5 characters code prefix, e.g. "benng"
 
-2. Goto line 53, replace the project code "CAF-TF" with your own unique project code, e.g. "lab1"
+2. Goto line 30, replace the project code "CAF-TF" with your own unique project code, e.g. "lab1"
 
 
 ## Deployment
@@ -36,7 +36,6 @@ Open file in VS code
 rover -lz /tf/caf/landingzones/caf_launchpad \
   -launchpad \
   -var-folder /tf/caf/gcc_starter/landingzone/configuration/level0/launchpad \
-  -parallelism 30 \
   -env sandpit \
   -a plan
 ```
@@ -45,7 +44,6 @@ rover -lz /tf/caf/landingzones/caf_launchpad \
 rover -lz /tf/caf/landingzones/caf_launchpad \
   -launchpad \
   -var-folder /tf/caf/gcc_starter/landingzone/configuration/level0/launchpad \
-  -parallelism 30 \
   -env sandpit \
   -a apply
 ```  

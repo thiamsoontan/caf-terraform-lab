@@ -13,6 +13,20 @@ role_mapping = {
           }
         }
       }
+      level1 = {
+        "Storage Blob Data Contributor" = {
+          logged_in = {
+            keys = ["user"]
+          }
+        }
+      }
+      level2 = {
+        "Storage Blob Data Contributor" = {
+          logged_in = {
+            keys = ["user"]
+          }
+        }
+      }            
       level3 = {
         "Storage Blob Data Contributor" = {
           logged_in = {

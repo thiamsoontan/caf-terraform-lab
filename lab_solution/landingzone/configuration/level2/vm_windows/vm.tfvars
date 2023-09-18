@@ -32,12 +32,12 @@ virtual_machines = {
     # Define the number of networking cards to attach the virtual machine
     networking_interfaces = {
       nic0 = {
-        # Value of the keys from networking.tfvars
+        # Value of the keys from networking.tfvars  
         # vnet_key                = "vnet_region1"
         # subnet_key              = "example"
         lz_key                  = "netowrking" # vnet and subnet in a remote landing zone        
         vnet_key                = "vnet_spoke_internet_re1" # "vnet_region1"
-        subnet_key              = "app" # "example"
+        subnet_key              = "app" # "example"   
         name                    = "0"
         enable_ip_forwarding    = false
         internal_dns_name_label = "nic0"
@@ -48,12 +48,12 @@ virtual_machines = {
     virtual_machine_settings = {
       windows = {
         name           = "example_vm2"
-        size           = "Standard_F2"
+        size           = "Standard_F2" # "standard_d2_v2" # "Standard_D8s_v3" # "standard_d2_v2" # D4sv3   Standard_D8s_v3 # 
         admin_username = "adminuser"
 
         # Spot VM to save money
-        priority        = "Spot"
-        eviction_policy = "Deallocate"
+        # priority        = "Spot"
+        # eviction_policy = "Deallocate"
 
         # Value of the nic keys to attach the VM. The first one in the list is the default nic
         network_interface_keys = ["nic0"]
@@ -104,7 +104,6 @@ keyvaults = {
     }
   }
 }
-
 
 # vnets = {
 #   vnet_region1 = {

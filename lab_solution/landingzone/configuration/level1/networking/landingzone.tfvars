@@ -1,6 +1,6 @@
 landingzone = {
   backend_type        = "azurerm"
-  level               = "level3"
+  level               = "level1" 
   key                 = "networking"
   global_settings_key = "launchpad"
   tfstates = {
