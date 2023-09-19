@@ -34,38 +34,48 @@ Open file in VS code
 
 2. Comment line 36 and line 37
 
+```bash
         # vnet_key                = "vnet_region1"
         # subnet_key              = "example"
+```
 
 3. Add vnet_key, subnet_key and lz_key at line 38 as shown below
 
+```bash
         lz_key                  = "networking" # vnet and subnet in a remote landing zone        
         vnet_key                = "vnet_spoke_internet_re1" # "vnet_region1"
         subnet_key              = "app" # "example"   
+```
 
 4. Comment line 55-56 priority and eviction_policy - only applicable for Spot priority
+
+```bash
         # priority        = "Spot"
         # eviction_policy = "Deallocate"
-   
+```   
 5. Comment line 2-7 global setting - since it is in level 0 launchpad
 
+```bash
 # global_settings = {
 #   default_region = "region1"
 #   regions = {
 #     region1 = "australiaeast"
 #   }
 # }
+```
 
 6. Comment line 9-13 resource groups setting - since it is in current level resource_group.tfvars
 
+```bash
 # resource_groups = {
 #   vm_region1 = {
 #     name = "example-virtual-machine-rg1"
 #   }
 # }
-
+```
 7. Comment line 106-122 vnets configuration - since it is created in level 3 networking
 
+```bash
 # vnets = {
 #   vnet_region1 = {
 #     resource_group_key = "vm_region1"
@@ -83,6 +93,7 @@ Open file in VS code
 
 #   }
 # }
+```
 
 ## Deployment
 
